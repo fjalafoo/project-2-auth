@@ -1,6 +1,8 @@
 {
   "development": {
-    "database": "auth_boilerplate",
+    "username": "postgres",
+    "password": "fatemafatema",
+    "database": "recipes_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

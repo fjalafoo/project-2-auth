@@ -1,4 +1,5 @@
 const express = require('express')
+const axios = require('axios'); 
 const app = express()
 const ejsLayouts = require('express-ejs-layouts')
 const cookieParser = require('cookie-parser')
