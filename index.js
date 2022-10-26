@@ -30,7 +30,14 @@ app.use('/recipes', require('./controllers/recipes'))
 
 // ROUTES
 app.get('/', (req, res)=>{
-    res.render('home')
+    let countries='www.themealdb.com/api/json/v1/1/list.php?a=list'
+    axios.get(countries).then(apiResponse => {
+        
+        let recipeCountry = apiResponse.data
+        console.log(recipeCountry)
+        res.render('home.ejs', {recipeCountry:recipeCountry})
+      })
+
 })
 
 
