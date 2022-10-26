@@ -23,15 +23,17 @@ router.get('/random', (req, res) => {
   //GET /recipes/country ==> it will display all recipes in a certain country
 
   router.get('/:c', (req, res) => {
+
     let countryUrl = 'https://www.themealdb.com/api/json/v1/1/list.php?a=list';
-     // Use request to call the API
+    // Use request to call the API
   axios.get(countryUrl).then(apiResponse => {
     let country = apiResponse.data;
-    
     // console.log(country)
     res.render('recipes/country.ejs', {country:country})
   })
+
   })
+
 
 
 
