@@ -4,11 +4,15 @@
     <button type="submit">Generate Random Meal</button>
 </form>
 
+<hr>
+
+<%let c = ["United-States-of-America","United-Kingdom","Canada","China","Croatia","	Netherlands","Egypt","France","Greece","India","Ireland",
+"Italy","Jamaica","Japan","Kenya","Malaysia","Mexico","Morocco","Poland","Portugal","Russia","Spain","Thailand","Tunisia","Turkey","","Vietnam"]%>
 
 <% for (let i =0; i <27;  i++ ) { %>
-    
-    <%= country.meals[i].strArea %>
-    <%#  will output the numbers 1-10 %>
+ 
+    <img src="https://www.countries-ofthe-world.com/flags-normal/flag-of-<%=c[i]%>.png" alt="">
+    <%country.meals[i].strArea %>
+    <hr>
+   
     <% } %>
-
-
