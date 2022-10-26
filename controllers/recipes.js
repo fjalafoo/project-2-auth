@@ -13,10 +13,8 @@ router.get('/random', (req, res) => {
     let randomUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
      // Use request to call the API
   axios.get(randomUrl).then(apiResponse => {
-    let random = apiResponse.data;
-    // console.log(random)
     let recipeDetail = apiResponse.data
-    console.log(recipeDetail)
+    // console.log(recipeDetail)
     res.render('random.ejs', {recipeDetail:recipeDetail})
   })
   })

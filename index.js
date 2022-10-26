@@ -29,16 +29,19 @@ app.use('/users', require('./controllers/users'))
 app.use('/recipes', require('./controllers/recipes'))
 
 // ROUTES
-app.get('/', (req, res)=>{
-    let countries='www.themealdb.com/api/json/v1/1/list.php?a=list'
-    axios.get(countries).then(apiResponse => {
-        
-        let recipeCountry = apiResponse.data
-        console.log(recipeCountry)
-        res.render('home.ejs', {recipeCountry:recipeCountry})
-      })
 
-})
+app.get('/', (req, res) => {
+    let countryUrl = 'https://www.themealdb.com/api/json/v1/1/list.php?a=list';
+     // Use request to call the API
+  axios.get(countryUrl).then(apiResponse => {
+    let country = apiResponse.data;
+    
+    // console.log(country)
+    res.render('home.ejs', {country:country})
+  })
+  })
+  
+
 
 
 

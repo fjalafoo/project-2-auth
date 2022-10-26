@@ -4,5 +4,11 @@
     <button type="submit">Generate Random Meal</button>
 </form>
 
-<p>Countries: </p>
+
+<% for (let i =0; i <27;  i++ ) { %>
+    
+    <%= country.meals[i].strArea %>
+    <%#  will output the numbers 1-10 %>
+    <% } %>
+
 
