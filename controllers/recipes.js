@@ -14,8 +14,9 @@ router.get('/random', (req, res) => {
      // Use request to call the API
   axios.get(randomUrl).then(apiResponse => {
     let random = apiResponse.data;
-    console.log(random)
+    // console.log(random)
     let recipeDetail = apiResponse.data
+    console.log(recipeDetail)
     res.render('random.ejs', {recipeDetail:recipeDetail})
   })
   })

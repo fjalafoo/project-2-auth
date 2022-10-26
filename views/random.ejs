@@ -1,2 +1,10 @@
-<h2>Hello, <%= user.email%> :)</h2>
-<h2>random meal</h2>
+<h2>Random meal is: <br> <%=recipeDetail.meals[0].strMeal%>!!!</h2>
+
+<img src="<%= recipeDetail.meals[0].strMealThumb %>" alt="">
+
+<p>It is originally <%=recipeDetail.meals[0].strArea%>.</p>
+
+
+
+
+<p>Check out the recipe video on YouTube: <a href="<%=recipeDetail.meals[0].strYoutube%>">CLICK HERE</a></p>
