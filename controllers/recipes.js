@@ -8,6 +8,25 @@ const bcrypt = require('bcrypt')
 
 
 
+
+  //GET /recipes/meals/id ==> it will display recipe details
+
+  router.get('/id=:id', (req, res) => {
+
+    let mealId = req.params.id
+    console.log(mealId)
+    let recipeUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
+    // Use request to call the API
+  axios.get(recipeUrl).then(apiResponse => {
+    
+    let recipeDetail = apiResponse.data;
+    console.log(recipeDetail)
+    res.render('recipes/recipeDetail.ejs', {recipeDetail:recipeDetail})
+  })
+
+  })
+
+
 // GET /recipes/random display a random recipe
 router.get('/random', (req, res) => {
     let randomUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
@@ -20,6 +39,7 @@ router.get('/random', (req, res) => {
   })
   
 
+
   //GET /recipes/country ==> it will display all recipes in a certain country
 
   router.get('/:c', (req, res) => {
@@ -28,12 +48,14 @@ router.get('/random', (req, res) => {
     let countryUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${ctr}`;
     // Use request to call the API
   axios.get(countryUrl).then(apiResponse => {
+    let ctr = req.params.c
     let country = apiResponse.data;
     // console.log(country)
-    res.render('recipes/country.ejs', {country:country})
+    res.render('recipes/country.ejs', {country:country,ctr:ctr})
   })
 
   })
+
 
 
 

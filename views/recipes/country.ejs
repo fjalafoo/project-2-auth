@@ -2,11 +2,8 @@
 
 <% for (let i =0; i < country.meals.length;  i++ ) { %>
  
-    <h4><%=country.meals[i].strMeal%></h4>
+    <h4><a href="id=<%=country.meals[i].idMeal%>"> <%=country.meals[i].strMeal%></a></h4>
     <img src="<%=country.meals[i].strMealThumb%>" alt="img" width="400" height="300">
     <hr>
    
 <% } %>
-
-
-<!-- loop for getting the country name from url and then display its list -->
