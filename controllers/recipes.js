@@ -24,7 +24,8 @@ router.get('/random', (req, res) => {
 
   router.get('/:c', (req, res) => {
 
-    let countryUrl = 'https://www.themealdb.com/api/json/v1/1/list.php?a=list';
+    let ctr = req.params.c
+    let countryUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${ctr}`;
     // Use request to call the API
   axios.get(countryUrl).then(apiResponse => {
     let country = apiResponse.data;
