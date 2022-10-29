@@ -14,13 +14,13 @@ const bcrypt = require('bcrypt')
   router.get('/id=:id', (req, res) => {
 
     let mealId = req.params.id
-    console.log(mealId)
+    // console.log(mealId)
     let recipeUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
     // Use request to call the API
   axios.get(recipeUrl).then(apiResponse => {
     
     let recipeDetail = apiResponse.data;
-    console.log(recipeDetail)
+    // console.log(recipeDetail)
     res.render('recipes/recipeDetail.ejs', {recipeDetail:recipeDetail})
   })
 
