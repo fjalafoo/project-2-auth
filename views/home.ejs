@@ -1,20 +1,22 @@
-<h2>Home</h2>
+<div class="content">
+    <h2>Home</h2>
 
-<form action="/recipes/random" method="GET">
-    <button type="submit">Generate Random Meal</button>
-</form>
-
-<hr>
-
-<%let c = ["United-States-of-America","United-Kingdom","Canada","China","Croatia","	Netherlands","Egypt","France","Greece","India","Ireland",
-"Italy","Jamaica","Japan","Kenya","Malaysia","Mexico","Morocco","Poland","Portugal","Russia","Spain","Thailand","Tunisia","Turkey","","Vietnam"]%>
-
-<% for (let i =0; i <27;  i++ ) { %>
- 
-    <a href="recipes/<%=country.meals[i].strArea%>"> <%=country.meals[i].strArea%> recipes</a>
-    <img src="https://www.countries-ofthe-world.com/flags-normal/flag-of-<%=c[i]%>.png" alt="">
-  
+    <form action="/recipes/random" method="GET">
+        <button type="submit">Generate Random Meal</button>
+    </form>
+    
     <hr>
-   
-<% } %>
+    
+    <%let c = ["United-States-of-America","United-Kingdom","Canada","China","Croatia","	Netherlands","Egypt","France","Greece","India","Ireland",
+    "Italy","Jamaica","Japan","Kenya","Malaysia","Mexico","Morocco","Poland","Portugal","Russia","Spain","Thailand","Tunisia","Turkey","","Vietnam"]%>
+    
+    <% for (let i =0; i <27;  i++ ) { %>
+     
+        <a href="recipes/<%=country.meals[i].strArea%>"> <%=country.meals[i].strArea%> recipes</a>
+        <img src="https://www.countries-ofthe-world.com/flags-normal/flag-of-<%=c[i]%>.png" alt="">
+      
+        <hr>
+       
+    <% } %>
 
+</div>
