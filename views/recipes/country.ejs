@@ -4,7 +4,7 @@
 
 <% for (let i =0; i < country.meals.length;  i++ ) { %>
  
-    <h4><a href="id=<%=country.meals[i].idMeal%>"> <%=country.meals[i].strMeal%></a></h4>
+    <h4><a href="/recipes/<%=country.meals[i].idMeal%>"> <%=country.meals[i].strMeal%></a></h4>
     <img src="<%=country.meals[i].strMealThumb%>" alt="img" width="400" height="300">
     <hr>
    

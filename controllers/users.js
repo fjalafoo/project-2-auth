@@ -10,14 +10,14 @@ router.get('/new', (req, res)=>{
 })
 
 router.post('/', async (req, res)=>{
-    const [newUser, created] = await db.user.findOrCreate({where:{email: req.body.email}})
+    const [newUser, created] = await db.user.findOrCreate({where:{username: req.body.username, email: req.body.email}})
     if(!created){
         console.log('user already exists')
         res.render('users/login.ejs', {error: 'Looks like you already have an account! Try logging in :)'})
     } else {
         const hashedPassword = bcrypt.hashSync(req.body.password, 10)
         newUser.password = hashedPassword
-        newUser.username = req.body.username
+        
         await newUser.save()
         const encryptedUserId = cryptojs.AES.encrypt(newUser.id.toString(), process.env.SECRET)
         const encryptedUserIdString = encryptedUserId.toString()

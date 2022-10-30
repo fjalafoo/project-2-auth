@@ -11,7 +11,7 @@ const bcrypt = require('bcrypt')
 
   //GET /recipes/id ==> it will display recipe details
 
-  router.get('/id=:id', (req, res) => {
+  router.get('/:id', (req, res) => {
 
     let mealId = req.params.id
     // console.log(mealId)
@@ -42,7 +42,7 @@ router.get('/random', (req, res) => {
 
   //GET /recipes/country ==> it will display all recipes in a certain country
 
-  router.get('/:c', (req, res) => {
+  router.get('/country/:c', (req, res) => {
 
     let ctr = req.params.c
     let countryUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${ctr}`;

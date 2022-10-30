@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
     <title>Foodia</title>
 </head>
 <body>
-    <nav class="navbar is-black role="navigation" aria-label="main navigation">
-        <div id="navbarBasicExample" class="navbar-menu"></div>
-            <div class="navbar-start">
+    <nav>
+        
                 <ul>
                     <% if(user){ %>
-                        <li><a class="navbar-item" href="/users/profile">Profile</a></li>
-                        <li><a class="navbar-item" href="/users/logout">Logout</a></li>
+                        <li><a href="/users/profile">Profile</a></li>
+                        <li><a  href="/users/logout">Logout</a></li>
                     <% } else { %> 
-                        <li><a class="navbar-item" href="/users/new">Sign Up</a></li>
-                        <li><a class="navbar-item" href="/users/login">Login</a></li>
+                        <li><a  href="/users/new">Sign Up</a></li>
+                        <li><a  href="/users/login">Login</a></li>
                     <% } %>
-                    <li> <a class="navbar-item" href="/">Home</a></li>
+                    <li> <a  href="/">Home</a></li>
                 </ul>
-            </div>
-               
-        </div>
+         
         
     </nav>
     <h1>F O O D I A</h1>

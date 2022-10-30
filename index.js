@@ -10,7 +10,6 @@ require('dotenv').config()
 // MIDDLEWARE
 app.set('view engine', 'ejs')
 app.use(ejsLayouts)
-app.use(express.static(__dirname + '/public'))
 app.use(cookieParser())
 app.use(express.urlencoded({extended: false}))
 
