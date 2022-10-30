@@ -1,44 +1,40 @@
 
+<div class="content">
 
-<h2>Random meal is: <br> <%=recipeDetail.meals[0].strMeal%>!!!</h2>
+    <h2>Random meal is: <br> <%=recipeDetail.meals[0].strMeal%>!!!</h2>
 
-<img src="<%= recipeDetail.meals[0].strMealThumb %>" alt="">
+    <img src="<%= recipeDetail.meals[0].strMealThumb %>" alt="">
+    
+    <h3>It is originally a <%=recipeDetail.meals[0].strArea%> recipe.</h3>
+    
+    <h4>Ingredients: <br></h4>
+    
+    <p><%= recipeDetail.meals[0].strMeasure1%>  <%= recipeDetail.meals[0].strIngredient1%></p>
+    <p><%= recipeDetail.meals[0].strMeasure2%>  <%= recipeDetail.meals[0].strIngredient2%></p>
+    <p><%= recipeDetail.meals[0].strMeasure3%>  <%= recipeDetail.meals[0].strIngredient3%></p>
+    <p><%= recipeDetail.meals[0].strMeasure4%>  <%= recipeDetail.meals[0].strIngredient4%></p>
+    <p><%= recipeDetail.meals[0].strMeasure5%>  <%= recipeDetail.meals[0].strIngredient5%></p>
+    <p><%= recipeDetail.meals[0].strMeasure6%>  <%= recipeDetail.meals[0].strIngredient6%></p>
+    <p><%= recipeDetail.meals[0].strMeasure7%>  <%= recipeDetail.meals[0].strIngredient7%></p>
+    <p><%= recipeDetail.meals[0].strMeasure8%>  <%= recipeDetail.meals[0].strIngredient8%></p>
+    <p><%= recipeDetail.meals[0].strMeasure9%>  <%= recipeDetail.meals[0].strIngredient9%></p>
+    <p><%= recipeDetail.meals[0].strMeasure10%>  <%= recipeDetail.meals[0].strIngredient10%></p>
+    <p><%= recipeDetail.meals[0].strMeasure11%>  <%= recipeDetail.meals[0].strIngredient11%></p>
+    <p><%= recipeDetail.meals[0].strMeasure12%>  <%= recipeDetail.meals[0].strIngredient12%></p>
+    <p><%= recipeDetail.meals[0].strMeasure13%>  <%= recipeDetail.meals[0].strIngredient13%></p>
+    <p><%= recipeDetail.meals[0].strMeasure14%>  <%= recipeDetail.meals[0].strIngredient14%></p>
+    <p><%= recipeDetail.meals[0].strMeasure15%>  <%= recipeDetail.meals[0].strIngredient15%></p>
+    <p><%= recipeDetail.meals[0].strMeasure16%>  <%= recipeDetail.meals[0].strIngredient16%></p>
+    <p><%= recipeDetail.meals[0].strMeasure17%>  <%= recipeDetail.meals[0].strIngredient17%></p>
+    <p><%= recipeDetail.meals[0].strMeasure18%>  <%= recipeDetail.meals[0].strIngredient18%></p>
+    <p><%= recipeDetail.meals[0].strMeasure19%>  <%= recipeDetail.meals[0].strIngredient19%></p>
+    <p><%= recipeDetail.meals[0].strMeasure20%>  <%= recipeDetail.meals[0].strIngredient20%></p>
+    
+    <h4>Instructions: <br></h4>
+    <p><%= recipeDetail.meals[0].strInstructions%></p>
+    
+    
+    <p>Check out the recipe video on YouTube: <a href="<%=recipeDetail.meals[0].strYoutube%>" target="_blank">CLICK HERE</a></p>
+    
 
-<h3>It is originally a <%=recipeDetail.meals[0].strArea%> recipe.</h3>
-
-<h4>Ingredients: <br></h4>
-
-<p><%= recipeDetail.meals[0].strMeasure1%>  <%= recipeDetail.meals[0].strIngredient1%></p>
-<p><%= recipeDetail.meals[0].strMeasure2%>  <%= recipeDetail.meals[0].strIngredient2%></p>
-<p><%= recipeDetail.meals[0].strMeasure3%>  <%= recipeDetail.meals[0].strIngredient3%></p>
-<p><%= recipeDetail.meals[0].strMeasure4%>  <%= recipeDetail.meals[0].strIngredient4%></p>
-<p><%= recipeDetail.meals[0].strMeasure5%>  <%= recipeDetail.meals[0].strIngredient5%></p>
-<p><%= recipeDetail.meals[0].strMeasure6%>  <%= recipeDetail.meals[0].strIngredient6%></p>
-<p><%= recipeDetail.meals[0].strMeasure7%>  <%= recipeDetail.meals[0].strIngredient7%></p>
-<p><%= recipeDetail.meals[0].strMeasure8%>  <%= recipeDetail.meals[0].strIngredient8%></p>
-<p><%= recipeDetail.meals[0].strMeasure9%>  <%= recipeDetail.meals[0].strIngredient9%></p>
-<p><%= recipeDetail.meals[0].strMeasure10%>  <%= recipeDetail.meals[0].strIngredient10%></p>
-<p><%= recipeDetail.meals[0].strMeasure11%>  <%= recipeDetail.meals[0].strIngredient11%></p>
-<p><%= recipeDetail.meals[0].strMeasure12%>  <%= recipeDetail.meals[0].strIngredient12%></p>
-<p><%= recipeDetail.meals[0].strMeasure13%>  <%= recipeDetail.meals[0].strIngredient13%></p>
-<p><%= recipeDetail.meals[0].strMeasure14%>  <%= recipeDetail.meals[0].strIngredient14%></p>
-<p><%= recipeDetail.meals[0].strMeasure15%>  <%= recipeDetail.meals[0].strIngredient15%></p>
-<p><%= recipeDetail.meals[0].strMeasure16%>  <%= recipeDetail.meals[0].strIngredient16%></p>
-<p><%= recipeDetail.meals[0].strMeasure17%>  <%= recipeDetail.meals[0].strIngredient17%></p>
-<p><%= recipeDetail.meals[0].strMeasure18%>  <%= recipeDetail.meals[0].strIngredient18%></p>
-<p><%= recipeDetail.meals[0].strMeasure19%>  <%= recipeDetail.meals[0].strIngredient19%></p>
-<p><%= recipeDetail.meals[0].strMeasure20%>  <%= recipeDetail.meals[0].strIngredient20%></p>
-
-<h4>Instructions: <br></h4>
-<p><%= recipeDetail.meals[0].strInstructions%></p>
-
-
-<p>Check out the recipe video on YouTube: <a href="<%=recipeDetail.meals[0].strYoutube%>" target="_blank">CLICK HERE</a></p>
-
-<!--
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Oqg_cO4s8ik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- let youtubeUrl=recipeDetail.meals[0].strYoutube
- the problem is the link has watch instead of embed tag 
-for example this embed link: https://www.youtube.com/embed/bCr3GasJWwE
-and this watch link: https://www.youtube.com/watch?v=bCr3GasJWwE 
-<iframe-->
+</div>

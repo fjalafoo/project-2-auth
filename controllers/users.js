@@ -56,7 +56,7 @@ router.get('/logout', (req, res)=>{
 router.get('/profile', async(req, res)=>{
 
     let faves = await db.recipe.findAll({
-       attributes: ['title','img']
+       attributes: ['title','img','recipeId']
       })
 
       res.render(`users/profile.ejs`,{faves:faves}) 
@@ -79,12 +79,39 @@ router.post('/profile', async (req, res)=>{
       }) 
               
        await recipe.addUser(user)
-      res.redirect(`/users/profile`) 
+     
     //    console.log("your favortie ")    
       } 
       catch(error) {
         console.log("error", error)
      }
+
+     res.redirect(`/users/profile`) 
 })
+
+
+// (Form) DELETE 
+
+router.delete('/profile', async (req,res) => {
+    // const recipeId = await db.recipes.findByPk(res.locals.recipe.recipeId)
+
+    rId = req.body.recipeId
+    await db.recipe.destroy({
+        where: { 
+            // id: req.params.recipeId
+            recipeId:req.body.recipeId
+            // title: req.body.title,
+            // img: req.body.img   
+         }
+    })
+    .then((recipe)=>{
+        res.render('users/profile',{faves: faves, rId})
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+    res.redirect(`/users/profile`)
+})
+
 
 module.exports = router

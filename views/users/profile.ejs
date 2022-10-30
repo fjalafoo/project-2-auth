@@ -1,14 +1,20 @@
-<h2>Hello, <%= user.username%> :)</h2>
+<div class="content">
 
-<h4>List of favorite recipes</h4>
+    <h2>Hello, <%= user.username%> :)</h2>
 
-<% faves.forEach(r => { %>
-
+    <h4>List of favorite recipes</h4>
     
-    <h3><%= r.title %></h3>
-
-<img src="<%= r.img %>" alt="">
-
+    <% faves.forEach(r => { %>
     
+        
+        <h3><%= r.title %></h3>
     
-    <% })  %>
+    <img src="<%= r.img %>" alt="">
+    
+    <form method="POST" action="/users/profile?_method=DELETE">
+        <button type="submit" class="button is-danger">Remove</button>
+    </form>
+        
+        
+        <% })  %>
+</div>
