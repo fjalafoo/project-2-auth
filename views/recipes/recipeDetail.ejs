@@ -42,17 +42,11 @@
 <h4>Comments: </h4>
 
 
-<form action="/id=<%= recipeDetail.id %>/new" method="POST">
+<form action="/id=<%= recipeDetail.id %>" method="POST">
 
-    <input type="text" name="content" autocomplete="off">
+    <input type="text" name="comment" autocomplete="off">
 
     <button type="submit">Add comment</button>
 </form>
-
- <% recipeDetail.comments.forEach(c => { %>
-        <p>
-            <%= c.content %>
-        </p>
-<% }) %>
 
 

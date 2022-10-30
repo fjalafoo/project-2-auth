@@ -4,20 +4,23 @@ const router = express.Router()
 const axios = require('axios')
 
 
-router.post('/id=:id/new', async (req,res) => {
-    // Grab our recipe
-    const recipe = await db.recipes.findByPk(req.params.id)
-    // Create a comment
-    const [newComment, created] = await db.comment.findOrCreate({
-        where: {
-            content: req.body.content
-        }
-    })
-    //Add our comment to the recipe
-    await recipe.addComment(newComment)
-    await res.locals.user.addComment(newComment)
-    //redirect to recipe details page
-    res.redirect(`/id=:${req.params.id}`)
+router.post('/id=:id', async (req,res) => {
+
+    if(res.locals.user){
+        let user = await db.user.findByPk(res.locals.user.id)
+        let newComment = db.comment.create({
+            comment:req.body.comment,
+            recipeId: req.params.id
+        })
+        await user.addComment(newComment)
+        res.redirect(`/id=${req.params.id}`)
+    }
+
+    else {
+        res.send("LOGIN!")
+    }
+
+   
     })
     
 

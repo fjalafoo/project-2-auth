@@ -9,7 +9,7 @@ const bcrypt = require('bcrypt')
 
 
 
-  //GET /recipes/meals/id ==> it will display recipe details
+  //GET /recipes/id ==> it will display recipe details
 
   router.get('/id=:id', (req, res) => {
 
