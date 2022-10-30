@@ -1,5 +1,41 @@
 # PEN Auth Boilerplate (Light)
 
+## Project Name: FOODIA
+ 
+ ## Overview
+ connecting themealdp API and some models utlizing CRUD
+
+ ### Routes
+table.png
+
+### Models
+There are five models in this project:
+1. comment.js
+2. index.js
+3. recipe.js
+4. user.js
+5. userfavorites.js
+
+### Views
+
+To make it simpler and cleaner, two folders have been created: recipes and users to handle specific ejs files
+
+### controllers
+
+Two main controllers recipes.js and users.js
+
+
+### P.S. the project is still a working progress!
+
+
+
+
+
+
+
+
+
+
 ## Overview: Authentication and Authorization
 Authentication is determining if a user is who they say they are. A public field like email is not enough to make this determination, and this is why we have passwords. Only the _authentic_ owner of that email will know the password. That's why the process of verifying user credentials is called authentication.
 
