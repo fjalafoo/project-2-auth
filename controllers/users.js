@@ -53,8 +53,38 @@ router.get('/logout', (req, res)=>{
     res.redirect('/')
 })
 
-router.get('/profile', (req, res)=>{
-    res.render('users/profile.ejs')
+router.get('/profile', async(req, res)=>{
+
+    let faves = await db.recipe.findAll({
+       attributes: ['title','img']
+      })
+
+      res.render(`users/profile.ejs`,{faves:faves}) 
+})
+
+router.post('/profile', async (req, res)=>{
+
+    try {
+        
+        const [recipe, recipeCreated] = await db.recipe.findOrCreate({
+        where: {
+        recipeId:req.body.recipeId,
+          title: req.body.title,
+          img: req.body.img   
+        }
+       })
+              
+        const user = await db.user.findAll({
+    
+      }) 
+              
+       await recipe.addUser(user)
+      res.redirect(`/users/profile`) 
+    //    console.log("your favortie ")    
+      } 
+      catch(error) {
+        console.log("error", error)
+     }
 })
 
 module.exports = router

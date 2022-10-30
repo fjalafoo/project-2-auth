@@ -1,3 +1,14 @@
 <h2>Hello, <%= user.username%> :)</h2>
 
 <h4>List of favorite recipes</h4>
+
+<% faves.forEach(r => { %>
+
+    
+    <h3><%= r.title %></h3>
+
+<img src="<%= r.img %>" alt="">
+
+    
+    
+    <% })  %>
