@@ -1,14 +1,31 @@
 
-<div class="content">
+
+<style>
+    @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+        
+</style>
+
+
 
     <h2>List of recipes:</h2>
 
 <% for (let i =0; i < country.meals.length;  i++ ) { %>
  
-    <h4><a href="/recipes/<%=country.meals[i].idMeal%>"> <%=country.meals[i].strMeal%></a></h4>
-    <img src="<%=country.meals[i].strMealThumb%>" alt="img" width="400" height="300">
-    <hr>
+
+   
+<div class="tile is-parent">
+    <article class="tile is-child notification is-info">
+      <p class="title"><a href="/recipes/<%=country.meals[i].idMeal%>"> <%=country.meals[i].strMeal%></a></p>
+      
+      <figure class="image is-2by2">
+        <img src="<%=country.meals[i].strMealThumb%>" alt="img">
+        
+      </figure>
+    </article>
+  </div>
+
    
 <% } %>
 
-</div>
+
+

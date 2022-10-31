@@ -92,26 +92,26 @@ router.post('/profile', async (req, res)=>{
 
 // (Form) DELETE 
 
-router.delete('/profile', async (req,res) => {
-    // const recipeId = await db.recipes.findByPk(res.locals.recipe.recipeId)
+// router.delete('/profile', async (req,res) => {
+//     // const recipeId = await db.recipes.findByPk(res.locals.recipe.recipeId)
 
-    rId = req.body.recipeId
-    await db.recipe.destroy({
-        where: { 
-            // id: req.params.recipeId
-            recipeId:req.body.recipeId
-            // title: req.body.title,
-            // img: req.body.img   
-         }
-    })
-    .then((recipe)=>{
-        res.render('users/profile',{faves: faves, rId})
-    })
-    .catch((error)=>{
-        console.log(error)
-    })
-    res.redirect(`/users/profile`)
-})
+//     rId = req.body.recipeId
+//     await db.recipe.destroy({
+//         where: { 
+//             // id: req.params.recipeId
+//             recipeId:req.body.recipeId
+//             // title: req.body.title,
+//             // img: req.body.img   
+//          }
+//     })
+//     .then((recipe)=>{
+//         res.render('users/profile',{faves: faves, rId})
+//     })
+//     .catch((error)=>{
+//         console.log(error)
+//     })
+//     res.redirect(`/users/profile`)
+// })
 
 
 module.exports = router
